@@ -5,8 +5,8 @@ amqp.connect('amqp://localhost', (err, connection) => {
 
   // Consumer 1
   connection.createChannel((err, channel) => {
-    if (err) throw err;
-
+    if (err) throw err
+    
     let exchangeName = 'directExchange';
 
     channel.assertExchange(exchangeName, 'direct', { durable: false });
