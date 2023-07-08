@@ -16,7 +16,7 @@ amqp.connect('amqp://localhost', (err, connection) => {
 
       console.log('Consumer 1 is waiting for messages...');
 
-      channel.bindQueue(q.queue, exchangeName, 'high');
+      channel.bindQueue(q.queue, exchangeName, 'high')
 
       channel.consume(q.queue, (msg) => {
         console.log('Consumer 1 received:', msg.content.toString());
