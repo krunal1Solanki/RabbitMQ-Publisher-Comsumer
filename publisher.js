@@ -1,5 +1,6 @@
 const amqp = require('amqplib/callback_api');
 
+// this is to check something
 amqp.connect('amqp://localhost', (err, connection) => {
   if (err) throw err;
   connection.createChannel((err, channel) => {
