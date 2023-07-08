@@ -14,7 +14,7 @@ amqp.connect('amqp://localhost', (err, connection) => {
     channel.assertQueue('', { exclusive: true }, (err, q) => {
       if (err) throw err;
 
-      console.log('Consumer 1 is waiting for messages...');
+      console.log('Consumer 1 is waiting for messages...')
 
       channel.bindQueue(q.queue, exchangeName, 'high')
 
